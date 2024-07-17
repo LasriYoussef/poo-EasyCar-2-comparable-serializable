@@ -1,0 +1,67 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>261</x><y>55</y><w>189</w><h>198</h></coordinates><panel_attributes>/Vehicle/
+--
+- brand: String
+- model: String
+- color: String
+- buyingDate: LocalDate
+- pricePerDay: double
+--
++ constructors
++ getters/setters
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>918</x><y>55</y><w>333</w><h>198</h></coordinates><panel_attributes>Customer
+--
+- firstName: String
+- lastName: String
+- address: String
+- city: String
+- postalCode: String
+--
++ constructors
++ getters/setters
+
++ totalMoneySpent(): double
++ addReservation(reservation: Reservation): void
++ removeReservation(reservation: Reservation): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>585</x><y>55</y><w>189</w><h>198</h></coordinates><panel_attributes>Reservation
+--
+- startDate: LocalDate
+- endDate: LocalDate
+- paid: boolean 
+--
++ constructors
++ getters/setters
+
++ totalPrice(): double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>441</x><y>109</y><w>162</w><h>45</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1..1
+&lt; concerns</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>765</x><y>109</y><w>171</w><h>45</h></coordinates><panel_attributes>lt=-
+m1=1..1
+m2=0..n
+&lt; makes
+</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>550</y><w>189</w><h>90</h></coordinates><panel_attributes>Car
+--
+- seats: int
+--
++ constructors
++ getters/setters
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>243</x><y>550</y><w>189</w><h>90</h></coordinates><panel_attributes>Truck
+--
+- cargoCapactiy: double
+--
+- constructors
+- getters/setters
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>441</x><y>343</y><w>189</w><h>90</h></coordinates><panel_attributes>Bike
+--
+- size: char
+--
+- constructors
+- getters/setters
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>387</x><y>244</y><w>108</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>72</x><y>343</y><w>324</w><h>153</h></coordinates><panel_attributes>/MotorizedVehicle/
+--
+- fuelType: Enum["Essence", "Diesel", "Hybrid", "Electric",]
+- fuelConsumption: int
+- integratedGPS: boolean
+--
++ constructors
++ getters/setters
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>225</x><y>244</y><w>117</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>487</y><w>108</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>216</x><y>487</y><w>135</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;70</additional_attributes></element></diagram>

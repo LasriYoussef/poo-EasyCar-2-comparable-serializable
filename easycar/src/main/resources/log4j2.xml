@@ -1,0 +1,19 @@
+<Configuration status="warn">
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout
+                pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+                <!-- %d : Indique que la date et l'heure de l'événement de journalisation doivent être incluses dans le message.
+                %p : Indique le niveau de journalisation (par exemple, INFO, DEBUG, ERROR). -5 : Spécifie que le niveau de journalisation doit être aligné à gauche et occuper au moins 5 caractères. Cela permet de maintenir un alignement uniforme des messages de journalisation
+                %c : Indique le nom du logger ou de la classe qui a généré le message de journalisation. {1} : Spécifie que seul le dernier segment du nom du logger ou de la classe doit être affiché. Par exemple, si le logger s'appelle com.example.MyClass, seul MyClass sera affiché.
+%L : Indique le numéro de la ligne du code source où l'événement de journalisation a été généré. Cela peut être utile pour le débogage, car il indique précisément où dans le code le message de journalisation a été enregistré.
+%m : Indique le message de journalisation lui-même, c'est-à-dire le texte que le développeur a passé au logger.
+%n : Ajoute un saut de ligne à la fin du message de journalisation. Cela permet de s'assurer que chaque message de journalisation est sur une ligne distincte dans le fichier ou la console. -->
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO" additivity="false">
+            <AppenderRef ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>
